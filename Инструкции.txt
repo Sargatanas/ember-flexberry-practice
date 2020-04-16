@@ -1,0 +1,22 @@
+Что требуется сейчас поправлять руками?
+1.	Генерация БД:
+1.1.	Убрать дублирующуюся запись
+Comment VARCHAR NULL,
+в таблице STORMAG
+1.2.	Добавить записи на генерирование последовательностей
+CREATE SEQUENCE <имя> START 1;
+для КАЖДОЙ последовательности (х6).
+
+2.	Бэк:
+   2.1.	Обновить NewPlatform.Flexberry.UserSettingsService до версии 3.1.0-beta02;
+   2.2.	Обновить NewPlatform.Flexberry.ORM.ODataService до последней версии;
+   2.3.	В ODataConfig изменить строки:
+        32 public static void Configure(HttpConfiguration config, IUnityContainer container, HttpServer httpServer)
+        63 var token = config.MapODataServiceDataObjectRoute(builder, httpServer).
+   2.4.	В Global изменить строки:
+        19 GlobalConfiguration.Configure(configuration => ODataConfig.Configure(configuration, con-tainer, GlobalConfiguration.DefaultServer));
+
+3.	Фронт:
+3.1.	Добавить импорты в миксины:
+import OrderStatusEnum from '../../../enums/i-i-s-shop-order-status';
+import InvoiceStatusEnum from '../../../enums/i-i-s-shop-invoice-status'; 
