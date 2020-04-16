@@ -1,0 +1,115 @@
+﻿{
+  "name": "IISShopInvoiceString",
+  "modelName": "i-i-s-shop-invoice-string",
+  "className": "InvoiceString",
+  "nameSpace": "IIS.Shop",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "amount",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "weight",
+      "type": "number",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "price",
+      "type": "number",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "totalSum",
+      "type": "number",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": false,
+      "name": "product",
+      "relatedTo": "i-i-s-shop-product",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "invoice",
+      "relatedTo": "i-i-s-shop-invoice",
+      "inverse": "invoiceString"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "InvoiceStringE",
+      "modelName": "i-i-s-shop-invoice-string",
+      "attrs": [
+        {
+          "name": "amount",
+          "caption": "Количество",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "weight",
+          "caption": "Вес",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "price",
+          "caption": "Цена",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "totalSum",
+          "caption": "Сумма по позиции",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Name",
+          "lookupValueField": "name",
+          "relationName": "Product",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [],
+          "index": 0,
+          "type": "standard",
+          "caption": "Товар",
+          "name": "product",
+          "relatedTo": "i-i-s-shop-product",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
