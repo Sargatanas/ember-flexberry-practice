@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NewPlatform.Flexberry.ORM.ODataService.Cors</name>
+    </assembly>
+    <members>
+        <member name="T:NewPlatform.Flexberry.ORM.ODataService.Cors.GenericCorsPolicyProvider">
+            <summary>
+            Implementation of <see cref="T:System.Web.Http.Cors.ICorsPolicyProvider"/> that adds value from "Origin" request header to the
+            "Access-Control-Allow-Origin" response header.
+            </summary>
+            <seealso cref="T:System.Web.Http.Cors.ICorsPolicyProvider" />
+        </member>
+        <member name="M:NewPlatform.Flexberry.ORM.ODataService.Cors.GenericCorsPolicyProvider.GetCorsPolicyAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)">
+            <summary>
+            Gets the <see cref="T:System.Web.Cors.CorsPolicy" />.
+            Adds value from "Origin" request header to the "Access-Control-Allow-Origin" response header.
+            </summary>
+            <param name="request">The request.</param>
+            <param name="cancellationToken">The cancellation token.</param>
+            <returns>The <see cref="T:System.Web.Cors.CorsPolicy" />.</returns>
+        </member>
+    </members>
+</doc>
