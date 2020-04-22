@@ -1,9 +1,4 @@
-<h3 class="ui header">
-  {{t "forms.i-i-s-shop-employee-e.caption"}}
-  {{#unless model.isNew}}
-    № {{ model.number }}
-  {{/unless}}
-  </h3>
+<h3 class="ui header">{{t "forms.i-i-s-shop-employee-e.caption"}}</h3>
 
 <form class="ui form flexberry-vertical-form" role="form">
   {{flexberry-error error=error}}
@@ -29,7 +24,7 @@
       </button>
     </div>
   </div>
-  {{!-- <div class="field">
+  <div class="field">
     {{flexberry-field
       readonly=readonly
       value=model.number
@@ -37,7 +32,7 @@
       label=(t "forms.i-i-s-shop-employee-e.number-caption")
     }}
     {{flexberry-validationmessage error=(v-get validationObject "number" "messages")}}
-  </div> --}}
+  </div>
   <div class="field">
     {{flexberry-field
       readonly=readonly
@@ -68,11 +63,11 @@
   <div class="field">
     {{flexberry-field
       readonly=readonly
-      value=model.phone
-      class=(if (v-get validationObject "phone" "isInvalid") "error")
-      label=(t "forms.i-i-s-shop-employee-e.phone-caption")
+      value=model.phoneNumer
+      class=(if (v-get validationObject "phoneNumer" "isInvalid") "error")
+      label=(t "forms.i-i-s-shop-employee-e.phoneNumer-caption")
     }}
-    {{flexberry-validationmessage error=(v-get validationObject "phone" "messages")}}
+    {{flexberry-validationmessage error=(v-get validationObject "phoneNumer" "messages")}}
   </div>
   <div class="field">
     {{flexberry-field

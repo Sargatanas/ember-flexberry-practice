@@ -15,9 +15,9 @@ import IISShopProductEForm from './forms/i-i-s-shop-product-e';
 import IISShopStorehouseEForm from './forms/i-i-s-shop-storehouse-e';
 import IISShopDocumentModel from './models/i-i-s-shop-document';
 import IISShopEmployeeModel from './models/i-i-s-shop-employee';
-import IISShopInvoiceStringModel from './models/i-i-s-shop-invoice-string';
+import IISShopInvoiceItemModel from './models/i-i-s-shop-invoice-item';
 import IISShopInvoiceModel from './models/i-i-s-shop-invoice';
-import IISShopOrderStringModel from './models/i-i-s-shop-order-string';
+import IISShopOrderItemModel from './models/i-i-s-shop-order-item';
 import IISShopOrderModel from './models/i-i-s-shop-order';
 import IISShopProductModel from './models/i-i-s-shop-product';
 import IISShopStoreProductModel from './models/i-i-s-shop-store-product';
@@ -30,16 +30,16 @@ $.extend(true, translations, {
   models: {
     'i-i-s-shop-document': IISShopDocumentModel,
     'i-i-s-shop-employee': IISShopEmployeeModel,
-    'i-i-s-shop-invoice-string': IISShopInvoiceStringModel,
+    'i-i-s-shop-invoice-item': IISShopInvoiceItemModel,
     'i-i-s-shop-invoice': IISShopInvoiceModel,
-    'i-i-s-shop-order-string': IISShopOrderStringModel,
+    'i-i-s-shop-order-item': IISShopOrderItemModel,
     'i-i-s-shop-order': IISShopOrderModel,
     'i-i-s-shop-product': IISShopProductModel,
     'i-i-s-shop-store-product': IISShopStoreProductModel,
     'i-i-s-shop-storehouse': IISShopStorehouseModel,
   },
 
-  'application-name': 'Shop',
+  'application-name': 'Магазин',
 
   forms: {
     loading: {
@@ -79,7 +79,7 @@ $.extend(true, translations, {
       },
 
       footer: {
-        'application-name': 'Shop',
+        'application-name': 'Магазин',
         'application-version': {
           caption: 'Версия аддона {{version}}',
           title: 'Это версия аддона ember-flexberry, которая сейчас используется в этом тестовом приложении ' +
@@ -90,7 +90,7 @@ $.extend(true, translations, {
 
       sitemap: {
         'application-name': {
-          caption: 'Shop',
+          caption: 'Магазин',
           title: 'Shop'
         },
         'application-version': {

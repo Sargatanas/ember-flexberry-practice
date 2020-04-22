@@ -10,6 +10,12 @@ export default {
       createDate: {
         __caption__: 'createDate'
       },
+      order: {
+        __caption__: 'order',
+        number: {
+          __caption__: 'number'
+        }
+      },
       customerName: {
         __caption__: 'customerName'
       },
@@ -25,14 +31,20 @@ export default {
       shipmentDateTime: {
         __caption__: 'shipmentDateTime'
       },
-      order: {
-        __caption__: 'order'
-      },
       responsiblePerson: {
-        __caption__: 'responsiblePerson'
+        __caption__: 'responsiblePerson',
+        lastName: {
+          __caption__: 'lastName'
+        }
       },
-      invoiceString: {
-        __caption__: 'invoiceString',
+      invoiceItem: {
+        __caption__: 'invoiceItem',
+        product: {
+          __caption__: 'product',
+          name: {
+            __caption__: 'name'
+          }
+        },
         amount: {
           __caption__: 'amount'
         },
@@ -44,9 +56,6 @@ export default {
         },
         totalSum: {
           __caption__: 'totalSum'
-        },
-        product: {
-          __caption__: 'product'
         }
       }
     },
@@ -114,8 +123,8 @@ export default {
     order: {
       __caption__: 'order'
     },
-    invoiceString: {
-      __caption__: 'invoiceString'
+    invoiceItem: {
+      __caption__: 'invoiceItem'
     }
   }
 };

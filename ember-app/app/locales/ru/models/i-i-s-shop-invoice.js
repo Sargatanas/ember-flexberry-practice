@@ -10,8 +10,14 @@ export default {
       createDate: {
         __caption__: 'Дата оформления'
       },
+      order: {
+        __caption__: 'Заказ',
+        number: {
+          __caption__: 'Number'
+        }
+      },
       customerName: {
-        __caption__: 'Получатель'
+        __caption__: 'Поулчатель'
       },
       totalSum: {
         __caption__: 'Сумма заказа'
@@ -20,19 +26,25 @@ export default {
         __caption__: 'Вес заказа'
       },
       note: {
-        __caption__: 'Примечание'
+        __caption__: 'Прмечание'
       },
       shipmentDateTime: {
         __caption__: 'Дата и время отгрузки'
       },
-      order: {
-        __caption__: 'Заказ'
-      },
       responsiblePerson: {
-        __caption__: 'Товар выдал'
+        __caption__: 'Товар выдал',
+        lastName: {
+          __caption__: 'Last name'
+        }
       },
-      invoiceString: {
+      invoiceItem: {
         __caption__: 'Список товаров к выдаче',
+        product: {
+          __caption__: 'Товар',
+          name: {
+            __caption__: 'Name'
+          }
+        },
         amount: {
           __caption__: 'Количество'
         },
@@ -44,9 +56,6 @@ export default {
         },
         totalSum: {
           __caption__: 'Сумма по позиции'
-        },
-        product: {
-          __caption__: 'Товар'
         }
       }
     },
@@ -103,10 +112,10 @@ export default {
       __caption__: 'Вес заказа'
     },
     note: {
-      __caption__: 'Примечание'
+      __caption__: 'Прмечание'
     },
     customerName: {
-      __caption__: 'Получатель'
+      __caption__: 'Поулчатель'
     },
     responsiblePerson: {
       __caption__: 'Товар выдал'
@@ -114,7 +123,7 @@ export default {
     order: {
       __caption__: 'Заказ'
     },
-    invoiceString: {
+    invoiceItem: {
       __caption__: 'Список товаров к выдаче'
     }
   }

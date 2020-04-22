@@ -7,5 +7,5 @@ export default {
   'paymentDate-caption': 'Дата оплаты',
   'shipmentDate-caption': 'Дата отгрузки',
   'manager-caption': 'Менеджер',
-  'orderString-caption': 'Содержимое заказа'
+  'orderItem-caption': 'Содержимое заказа'
 };

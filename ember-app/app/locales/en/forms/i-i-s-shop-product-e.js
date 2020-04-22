@@ -4,5 +4,6 @@ export default {
   'name-caption': 'name',
   'measure-caption': 'measure',
   'description-caption': 'description',
-  'price-caption': 'price'
+  'price-caption': 'price',
+  'weight-caption': 'weight'
 };

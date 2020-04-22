@@ -10,6 +10,12 @@ export default {
       createDate: {
         __caption__: 'createDate'
       },
+      manager: {
+        __caption__: 'manager',
+        lastName: {
+          __caption__: 'lastName'
+        }
+      },
       totalSum: {
         __caption__: 'totalSum'
       },
@@ -19,11 +25,20 @@ export default {
       shipmentDate: {
         __caption__: 'shipmentDate'
       },
-      manager: {
-        __caption__: 'manager'
-      },
-      orderString: {
-        __caption__: 'orderString',
+      orderItem: {
+        __caption__: 'orderItem',
+        product: {
+          __caption__: 'product',
+          name: {
+            __caption__: 'name'
+          },
+          price: {
+            __caption__: 'price'
+          },
+          weight: {
+            __caption__: 'weight'
+          }
+        },
         amount: {
           __caption__: 'amount'
         },
@@ -32,9 +47,6 @@ export default {
         },
         totalSum: {
           __caption__: 'totalSum'
-        },
-        product: {
-          __caption__: 'product'
         }
       }
     },
@@ -81,8 +93,8 @@ export default {
     manager: {
       __caption__: 'manager'
     },
-    orderString: {
-      __caption__: 'orderString'
+    orderItem: {
+      __caption__: 'orderItem'
     }
   }
 };

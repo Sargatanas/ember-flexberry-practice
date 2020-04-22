@@ -4,6 +4,6 @@ export default {
   'lastName-caption': 'lastName',
   'firstName-caption': 'firstName',
   'middleName-caption': 'middleName',
-  'phone-caption': 'phone',
+  'phoneNumer-caption': 'phoneNumer',
   'email-caption': 'email'
 };

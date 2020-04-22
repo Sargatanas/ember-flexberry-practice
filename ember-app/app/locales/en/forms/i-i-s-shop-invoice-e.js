@@ -10,5 +10,5 @@ export default {
   'shipmentDateTime-caption': 'shipmentDateTime',
   'order-caption': 'order',
   'responsiblePerson-caption': 'responsiblePerson',
-  'invoiceString-caption': 'invoiceString'
+  'invoiceItem-caption': 'invoiceItem'
 };

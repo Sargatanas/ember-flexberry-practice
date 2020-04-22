@@ -14,7 +14,7 @@ export let Model = Mixin.create({
   customerName: DS.attr('string'),
   responsiblePerson: DS.belongsTo('i-i-s-shop-employee', { inverse: null, async: false }),
   order: DS.belongsTo('i-i-s-shop-order', { inverse: null, async: false }),
-  invoiceString: DS.hasMany('i-i-s-shop-invoice-string', { inverse: 'invoice', async: false })
+  invoiceItem: DS.hasMany('i-i-s-shop-invoice-item', { inverse: 'invoice', async: false })
 });
 
 export let ValidationRules = {
@@ -35,14 +35,14 @@ export let ValidationRules = {
     descriptionKey: 'models.i-i-s-shop-invoice.validations.totalSum.__caption__',
     validators: [
       validator('ds-error'),
-      validator('number', { allowString: true, allowBlank: true, integer: true }),
+      validator('number', { allowString: true, allowBlank: true }),
     ],
   },
   totalWeight: {
     descriptionKey: 'models.i-i-s-shop-invoice.validations.totalWeight.__caption__',
     validators: [
       validator('ds-error'),
-      validator('number', { allowString: true, allowBlank: true, integer: true }),
+      validator('number', { allowString: true, allowBlank: true }),
     ],
   },
   note: {
@@ -69,8 +69,8 @@ export let ValidationRules = {
       validator('ds-error'),
     ],
   },
-  invoiceString: {
-    descriptionKey: 'models.i-i-s-shop-invoice.validations.invoiceString.__caption__',
+  invoiceItem: {
+    descriptionKey: 'models.i-i-s-shop-invoice.validations.invoiceItem.__caption__',
     validators: [
       validator('ds-error'),
       validator('has-many'),
@@ -89,25 +89,27 @@ export let defineProjections = function (modelClass) {
     number: attr('Номер', { index: 0 }),
     status: attr('Статус', { index: 1 }),
     createDate: attr('Дата оформления', { index: 2 }),
-    customerName: attr('Получатель', { index: 4 }),
-    totalSum: attr('Сумма заказа', { index: 5 }),
-    totalWeight: attr('Вес заказа', { index: 6 }),
-    note: attr('Примечание', { index: 7 }),
-    shipmentDateTime: attr('Дата и время отгрузки', { index: 8 }),
     order: belongsTo('i-i-s-shop-order', 'Заказ', {
-
+      number: attr('Number', { index: 3, hidden: true }),
+      totalSum: attr('TotalSum', { index: 4, hidden: true }), // добавлено
     }, { index: 3, displayMemberPath: 'number' }),
+    customerName: attr('Получатель', { index: 5 }),
+    totalSum: attr('Сумма заказа', { index: 6 }),
+    totalWeight: attr('Вес заказа', { index: 7 }),
+    note: attr('Примечание', { index: 8 }),
+    shipmentDateTime: attr('Дата и время отгрузки', { index: 9 }),
     responsiblePerson: belongsTo('i-i-s-shop-employee', 'Товар выдал', {
-
-    }, { index: 9, displayMemberPath: 'lastName' }),
-    invoiceString: hasMany('i-i-s-shop-invoice-string', 'Список товаров к выдаче', {
-      amount: attr('Количество', { index: 1 }),
-      weight: attr('Вес', { index: 2 }),
-      price: attr('Цена', { index: 3 }),
-      totalSum: attr('Сумма по позиции', { index: 4 }),
+      lastName: attr('Last name', { index: 11, hidden: true })
+    }, { index: 10, displayMemberPath: 'lastName' }),
+    invoiceItem: hasMany('i-i-s-shop-invoice-item', 'Список товаров к выдаче', {
       product: belongsTo('i-i-s-shop-product', 'Товар', {
-
-      }, { index: 0, displayMemberPath: 'name' })
+        name: attr('Name', { index: 1, hidden: true }),
+        weight: attr('Weight', { index: 2, hidden: true }) // добавлено
+      }, { index: 0, displayMemberPath: 'name' }),
+      amount: attr('Количество', { index: 2 }),
+      weight: attr('Вес', { index: 3 }),
+      price: attr('Цена', { index: 4 }),
+      totalSum: attr('Сумма по позиции', { index: 5 })
     })
   });
 

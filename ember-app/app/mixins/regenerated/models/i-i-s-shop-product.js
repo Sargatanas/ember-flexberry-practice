@@ -9,7 +9,8 @@ export let Model = Mixin.create({
   name: DS.attr('string'),
   measure: DS.attr('string'),
   description: DS.attr('string'),
-  price: DS.attr('number')
+  price: DS.attr('number'),
+  weight: DS.attr('number')
 });
 
 export let ValidationRules = {
@@ -42,7 +43,14 @@ export let ValidationRules = {
     descriptionKey: 'models.i-i-s-shop-product.validations.price.__caption__',
     validators: [
       validator('ds-error'),
-      validator('number', { allowString: true, allowBlank: true, integer: true }),
+      validator('number', { allowString: true, allowBlank: true }),
+    ],
+  },
+  weight: {
+    descriptionKey: 'models.i-i-s-shop-product.validations.weight.__caption__',
+    validators: [
+      validator('ds-error'),
+      validator('number', { allowString: true, allowBlank: true }),
     ],
   },
 };
@@ -53,7 +61,8 @@ export let defineProjections = function (modelClass) {
     name: attr('Наименование', { index: 1 }),
     measure: attr('Единица измерения', { index: 2 }),
     description: attr('Описание', { index: 3 }),
-    price: attr('Цена за ед.', { index: 4 })
+    price: attr('Цена за ед.', { index: 4 }),
+    weight: attr('Вес', { index: 5 })
   });
 
   modelClass.defineProjection('ProductL', 'i-i-s-shop-product', {
@@ -61,6 +70,7 @@ export let defineProjections = function (modelClass) {
     name: attr('Наименование', { index: 1 }),
     measure: attr('Единица измерения', { index: 2 }),
     description: attr('Описание', { index: 3 }),
-    price: attr('Цена за ед.', { index: 4 })
+    price: attr('Цена за ед.', { index: 4 }),
+    weight: attr('Вес', { index: 5 })
   });
 };

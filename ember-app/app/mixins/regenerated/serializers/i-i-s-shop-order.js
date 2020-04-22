@@ -6,7 +6,7 @@ export let Serializer = Mixin.create({
     let parentAttrs = this._super();
     let attrs = {
       manager: { serialize: 'odata-id', deserialize: 'records' },
-      orderString: { serialize: false, deserialize: 'records' }
+      orderItem: { serialize: false, deserialize: 'records' }
     };
 
     return $.extend(true, {}, parentAttrs, attrs);

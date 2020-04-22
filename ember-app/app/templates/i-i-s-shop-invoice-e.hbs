@@ -139,16 +139,16 @@
   </div>
 
   <div class="field">
-    <label>{{t "forms.i-i-s-shop-invoice-e.invoiceString-caption"}}</label>
+    <label>{{t "forms.i-i-s-shop-invoice-e.invoiceItem-caption"}}</label>
     {{flexberry-groupedit
-      componentName="invoiceStringGroupEdit"
+      componentName="invoiceItemGroupEdit"
       mainModelProjection=modelProjection
-      modelProjection=modelProjection.attributes.invoiceString
-      content=model.invoiceString
+      modelProjection=modelProjection.attributes.invoiceItem
+      content=model.invoiceItem
       readonly=readonly
       orderable=false
-      class=(if (v-get validationObject "invoiceString" "isInvalid") "error")
+      class=(if (v-get validationObject "invoiceItem" "isInvalid") "error")
     }}
-    {{flexberry-validationmessage error=(v-get validationObject "invoiceString" "messages")}}
+    {{flexberry-validationmessage error=(v-get validationObject "invoiceItem" "messages")}}
   </div>
 </form>

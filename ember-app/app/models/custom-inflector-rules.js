@@ -7,7 +7,7 @@ inflector.irregular('document', 'Documents');
 inflector.irregular('employee', 'Employees');
 inflector.irregular('invoice', 'Invoices');
 inflector.irregular('product', 'Products');
-inflector.irregular('string', 'Strings');
 inflector.irregular('order', 'Orders');
+inflector.irregular('item', 'Items');
 
 export default {};

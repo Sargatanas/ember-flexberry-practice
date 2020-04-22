@@ -4,6 +4,6 @@ export default {
   'lastName-caption': 'Фамилия',
   'firstName-caption': 'Имя',
   'middleName-caption': 'Отчество',
-  'phone-caption': 'Телефон',
+  'phoneNumer-caption': 'Телефон',
   'email-caption': 'Электронная почта'
 };

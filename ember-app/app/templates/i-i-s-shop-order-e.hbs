@@ -108,16 +108,16 @@
   </div>
 
   <div class="field">
-    <label>{{t "forms.i-i-s-shop-order-e.orderString-caption"}}</label>
+    <label>{{t "forms.i-i-s-shop-order-e.orderItem-caption"}}</label>
     {{flexberry-groupedit
-      componentName="orderStringGroupEdit"
+      componentName="orderItemGroupEdit"
       mainModelProjection=modelProjection
-      modelProjection=modelProjection.attributes.orderString
-      content=model.orderString
+      modelProjection=modelProjection.attributes.orderItem
+      content=model.orderItem
       readonly=readonly
       orderable=false
-      class=(if (v-get validationObject "orderString" "isInvalid") "error")
+      class=(if (v-get validationObject "orderItem" "isInvalid") "error")
     }}
-    {{flexberry-validationmessage error=(v-get validationObject "orderString" "messages")}}
+    {{flexberry-validationmessage error=(v-get validationObject "orderItem" "messages")}}
   </div>
 </form>

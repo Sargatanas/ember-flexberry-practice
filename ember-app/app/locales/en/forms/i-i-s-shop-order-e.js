@@ -7,5 +7,5 @@ export default {
   'paymentDate-caption': 'paymentDate',
   'shipmentDate-caption': 'shipmentDate',
   'manager-caption': 'manager',
-  'orderString-caption': 'orderString'
+  'orderItem-caption': 'orderItem'
 };

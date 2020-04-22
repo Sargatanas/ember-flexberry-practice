@@ -10,5 +10,5 @@ export default {
   'shipmentDateTime-caption': 'Дата и время отгрузки',
   'order-caption': 'Заказ',
   'responsiblePerson-caption': 'Товар выдал',
-  'invoiceString-caption': 'Список товаров к выдаче'
+  'invoiceItem-caption': 'Список товаров к выдаче'
 };

@@ -69,4 +69,13 @@
     }}
     {{flexberry-validationmessage error=(v-get validationObject "price" "messages")}}
   </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.weight
+      class=(if (v-get validationObject "weight" "isInvalid") "error")
+      label=(t "forms.i-i-s-shop-product-e.weight-caption")
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "weight" "messages")}}
+  </div>
 </form>

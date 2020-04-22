@@ -15,6 +15,9 @@ export default {
       },
       price: {
         __caption__: 'price'
+      },
+      weight: {
+        __caption__: 'weight'
       }
     },
     ProductL: {
@@ -32,6 +35,9 @@ export default {
       },
       price: {
         __caption__: 'price'
+      },
+      weight: {
+        __caption__: 'weight'
       }
     }
   },
@@ -50,6 +56,9 @@ export default {
     },
     price: {
       __caption__: 'price'
+    },
+    weight: {
+      __caption__: 'weight'
     }
   }
 };

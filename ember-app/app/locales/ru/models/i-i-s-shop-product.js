@@ -15,6 +15,9 @@ export default {
       },
       price: {
         __caption__: 'Цена за ед.'
+      },
+      weight: {
+        __caption__: 'Вес'
       }
     },
     ProductL: {
@@ -32,6 +35,9 @@ export default {
       },
       price: {
         __caption__: 'Цена за ед.'
+      },
+      weight: {
+        __caption__: 'Вес'
       }
     }
   },
@@ -50,6 +56,9 @@ export default {
     },
     price: {
       __caption__: 'Цена за ед.'
+    },
+    weight: {
+      __caption__: 'Вес'
     }
   }
 };

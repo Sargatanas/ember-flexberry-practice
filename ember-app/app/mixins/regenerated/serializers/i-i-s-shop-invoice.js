@@ -7,7 +7,7 @@ export let Serializer = Mixin.create({
     let attrs = {
       responsiblePerson: { serialize: 'odata-id', deserialize: 'records' },
       order: { serialize: 'odata-id', deserialize: 'records' },
-      invoiceString: { serialize: false, deserialize: 'records' }
+      invoiceItem: { serialize: false, deserialize: 'records' }
     };
 
     return $.extend(true, {}, parentAttrs, attrs);

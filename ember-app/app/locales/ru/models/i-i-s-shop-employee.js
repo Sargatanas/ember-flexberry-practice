@@ -13,7 +13,7 @@ export default {
       middleName: {
         __caption__: 'Отчество'
       },
-      phone: {
+      phoneNumer: {
         __caption__: 'Телефон'
       },
       email: {
@@ -33,7 +33,7 @@ export default {
       middleName: {
         __caption__: 'Отчество'
       },
-      phone: {
+      phoneNumer: {
         __caption__: 'Телефон'
       },
       email: {
@@ -54,7 +54,7 @@ export default {
     middleName: {
       __caption__: 'Отчество'
     },
-    phone: {
+    phoneNumer: {
       __caption__: 'Телефон'
     },
     email: {

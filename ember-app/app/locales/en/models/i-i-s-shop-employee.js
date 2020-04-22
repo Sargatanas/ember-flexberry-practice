@@ -13,8 +13,8 @@ export default {
       middleName: {
         __caption__: 'middleName'
       },
-      phone: {
-        __caption__: 'phone'
+      phoneNumer: {
+        __caption__: 'phoneNumer'
       },
       email: {
         __caption__: 'email'
@@ -33,8 +33,8 @@ export default {
       middleName: {
         __caption__: 'middleName'
       },
-      phone: {
-        __caption__: 'phone'
+      phoneNumer: {
+        __caption__: 'phoneNumer'
       },
       email: {
         __caption__: 'email'
@@ -54,8 +54,8 @@ export default {
     middleName: {
       __caption__: 'middleName'
     },
-    phone: {
-      __caption__: 'phone'
+    phoneNumer: {
+      __caption__: 'phoneNumer'
     },
     email: {
       __caption__: 'email'

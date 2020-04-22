@@ -8,15 +8,21 @@ export default {
         __caption__: 'Адрес'
       },
       storekeeper: {
-        __caption__: 'Кладовщик'
+        __caption__: 'Кладовщик',
+        lastName: {
+          __caption__: 'Last name'
+        }
       },
       storeProduct: {
         __caption__: 'Список товаров',
+        product: {
+          __caption__: 'Товар',
+          name: {
+            __caption__: 'Name'
+          }
+        },
         amount: {
           __caption__: 'Количество'
-        },
-        product: {
-          __caption__: 'Товар'
         }
       }
     },
